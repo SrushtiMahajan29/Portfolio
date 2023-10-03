@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: rgb(48 48 48);
+        color: rgb(218 218 218);
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 90px;
+        background-color: #9d60ff;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    nav li {
+        list-style: none;
+        margin: 0 24PX;
+    }
+
+    nav li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: purple;
+        font-size: 1.4rem;
+    }
+
+    main hr {
+        border: 0px;
+        background: #9d60ff;
+        height: 1.2px;
+        margin: 40px 84px;
+    }
+
+    .left {
+        font-size: 2rem;
+    }
+
+    .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 40px 0;
+
+    }
+
+    .firstSection>div {
+        width: 30%;
+    }
+
+    .leftSection {
+        /* background-color: red; */
+        /* width: 30px; */
+        font-size: 3rem;
+    }
+
+    .rightSection img {
+        width: 100%;
+        height: 100%;
+        /* margin: 30px 0; */
+        /* border: 2px solid black; */
+
+        /* background-color: red; */
+        /* width: 30px; */
+
+    }
+
+    .ppl {
+        color: #9d60ff;
+    }
+
+    #element {
+        color: #9d60ff;
+    }
+
+    .secondSection {
+        max-width: 88vw;
+        margin: auto;
+        height: 80vh;
+        /* background-color:#6b5d80; */
+
+    }
+
+    .secondSection h1 {
+        font-size: 1.9rem;
+    }
+
+    .secondSection .box {
+        background: white;
+        width: 88vw;
+        height: 2px;
+        margin: 40px 0;
+        display: flex;
+    }
+
+    /* .secondSection .verticle {
+      
+      width: 1px;
+      height:93px;
+      background-color: white;
+     margin: 0 100px;
+     } */
+    /* .secondSection .box .verticle{
+        background-color: white; 
+       height: 93px;
+       width: 1px;
+       margin: 0 100px;
+       /* padding: 2px 50px; */
+    /* } */
+
+    */ .secondSection .box .verticle {
+        /* background-color: white; */
+        height: 243px;
+        width: -1px;
+        margin: 8px 8px;
+        padding: 2px 50px;
+    }
+
+    .secondSection .box .verticle img {
+        /* background-color: white; */
+        height: 143px;
+        width: -1px;
+        margin: 26px 8px;
+        padding: 2px 50px;
+        border-radius: 500px;
+    }
+
+    .vertical-text {
+        position: relative;
+        top: 30px;
+        width: 300px;
+        left: 55px;
+        font-size: 19px;
+    }
+
+    .vertical-desc {
+        position: relative;
+        top: 50px;
+        width: 300px;
+        font-size: 15px;
+        left: 10px;
+        margin: 0 55px;
+    }
+
+    .btn {
+        background-color: white;
+        border: black;
+        border-radius: 25px;
+        color: blueviolet;
+        width: 30px;
+        padding: 1px 5px;
+    }
+
+    .ssc {
+        margin: 25px 0px;
+    }
+
+    .thirdSection {
+        max-width: 88vw;
+        margin: auto;
+        height: 50vh;
+    }
+
+    .thirdSection h1 {
+        font-size: 1.9rem;
+    }
+
+    .thirdSection .box {
+        background: white;
+        width: 88vw;
+        height: 2px;
+        margin: 40px 0;
+        display: flex;
+        left: 50px;
+    }
+
+    .thirdSection .box .verticle {
+        /* background-color: white; */
+        height: 243px;
+        width: -1px;
+        margin: 3px -170px;
+        padding: 0px 60px;
+        /* displasy: flex; */
+        left: 50px;
+    }
+
+    /* .thirdSection .box .verticle .img {
+
+        height: 20px;
+        width: 50px;
+    } */
+    .thirdSection .sk {
+        height: 50px;
+        width: 50px;
+
+    }
+
+    .fourthSection {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        place-items: center;
+
+    }
+    .imgSlider {
+        width: 50%;
+        height: 500px;
+        background:white; 
+        background-size: 100% 100%; 
+        border: 5px solid black;
+        box-shadow: white 0px 8px 24px;
+        animation: changeImage 20s linear infinite;
+
+    }
+
+    @keyframes changeImage {
+        0%{
+            background-image: url(certificates/cppspokentut.png);
+        }
+        15%{
+            background-image: url(certificates/javaspokentut.png);
+
+        }
+        30%{
+            background-image: url(certificates/gimpcertificate.png);
+
+        }
+        45%{
+            background-image: url(certificates/researchpaper.png);
+
+        }
+        60%{
+            background-image: url(certificates/openwaverhtmlcss.png);
+
+        }
+        75%{
+            background-image: url(certificates/worshop1.png);
+
+        }
+        90%{
+            background-image: url(certificates/coding\ ninja.png);
+        }
+        100%{
+            background-image: url(certificates/coding\ ninja.png);
+
+        }
+    }
+    .swiper {
+        width: 80%;
+        height: fit-content;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+    }
+    footer{
+        background-color: black;
+        /* height: 233px; */
+
+    }
+    footer .footer-rights{
+        text-align: center;
+        color: gray;
+        padding: 20px;
+    }
+    
+    .footer{
+        display: flex;
+        margin: 23px 122px;
+        justify-content:space-evenly ;
+
+    }
+    .footer >div{
+        width: 223px;
+
+    }
+    .footer ul{
+        list-style-type: none;
+    }
+    .grey {
+        color: gray;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                Srushti's Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Certifications">Certifications</a></li>
+                    <li><a href="#Contact">Contact me</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection" id="Home">
+            <div class="leftSection">
+                Hii..I am <span class="ppl">Srushti </span>
+                <div>
+                    I am a passionate
+                </div>
+                <div>
+                    IT student who loves
+                </div>
+                <span id="element"></span>
+            </div>
+
+            <div class="rightSection">
+
+                <img src="images/AGAIN2.webp" alt="">
+    
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="Education">
+            <span class="grey">What I have learned so far</span>
+            <h1>Education</h1>
+            <div class="box">
+                <div class="verticle">
+                    <img class="imgtop" src="images/Primary-School-scaled.jpg" alt="">
+                    <div class="vertical-text">
+                        <h2>School & Jr College</h2>
+                    </div>
+                    <div class="vertical-desc">
+                        <div class="ssc">
+                            <h4>
+                                <li>S. D. Kude Highschool, Dharangaon</li>
+                            </h4>
+                            SSC - 95.50%
+                            (2019)
+                            <p><a href="images/ssc result.jpeg" class="btn">Ssc cerificate</a></p>
+
+
+                        </div>
+                        <div class="hsc">
+                            <h4>
+                                <li>ACS College, Dharangaon
+                            </h4>
+                            </li>
+                            <ul>
+                                HSC- 93.50 %
+                                (2019 - 2021)
+                                <p><a href="images/hsc rersult.jpeg" class="btn">Hsc cerificate</a></p>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="verticle">
+                    <img class="imgtop" src="images/colleges.png" alt="">
+                    <div class="vertical-text">
+                        <h2>Sr. College</h2>
+                    </div>
+                    <div class="vertical-desc">
+                        <h4>
+                            <li>PVG's College of Engineering, Pune</li>
+                        </h4>
+                        <br>
+                        BE in Information Technology Currently in Second Year of degree Program <br><br>
+                        CGPA (1st year) - 9.25
+                        <br>
+                        <a href="images/1st year.png" class="btn">1st year result</a>
+                        <br><br>
+                        CGPA (2nd year) - 8.00 <br>
+                        <a href="images/2nd year.png" class="btn">2nd year result</a>
+                        <br><br>
+                        3rd year - studying
+                        <br>
+                        Cummins Scholar
+                    </div>
+                </div>
+                <div class="verticle">
+                    <img class="imgtop" src="images/scholarships.png" alt="">
+                    <div class="vertical-text">
+                        <h2>Scholarships received</h2>
+                    </div>
+                    <div class="vertical-desc">
+                        <li>Cummins India Nurturing Brilliance Scholar</li>
+                        <br>
+                        (2022)
+                        <p><a href=""></a>certificate</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection" id="Skills">
+            <span class="grey">What I have learned so far</span>
+            <h1> Skills</h1>
+            <div class="box">
+
+                <div class="verticle">
+
+                    <div class="vertical-text">
+                        <h3>C</h3>
+                    </div>
+                    <div class="vertical-desc">
+                        <img src="images/C_Logo.png" alt="1st skill" class="sk">
+                        <br>Proffeciency-8
+                    </div>
+                </div>
+                <div class="verticle">
+                    <div class="vertical-text">
+                        <h3>Cpp</h3>
+                    </div>
+                    <div class="vertical-desc">
+                        <img src="images/c++-logo.png" alt="2nd skill" class="sk">
+                        <br>Proffeciency-8.5
+                    </div>
+                </div>
+                <div class="verticle">
+                    <div class="vertical-text">
+                        <h3>Java</h3>
+                    </div>
+                    <div class="vertical-desc">
+                        <img src="images/java.png" alt="3rd skill" class="sk">
+                        <br>Proffeciency-7
+                    </div>
+                </div>
+                <div class="verticle">
+                    <div class="vertical-text">
+                        <h3>Html</h3>
+                    </div>
+                    <div class="vertical-desc">
+                        <img src="images/html.png" alt="4th skill" class="sk">
+                        <br>Proffeciency-8
+                    </div>
+                </div>
+                <div class="verticle">
+                    <div class="vertical-text">
+                        <h3>Css</h3>
+                    </div>
+                    <div class="vertical-desc">
+                        <img src="images/css.png" alt="5th skill" class="sk">
+                        <br>Proffeciency-8
+
+                    </div>
+                </div>
+                <div class="verticle">
+                    <div class="vertical-text">
+                        <h3>DSA</h3>
+                    </div>
+
+                    <div class="vertical-desc">
+                        <img src="images/DSA-full-form.png" alt="6th skill" class="sk">
+                        <br>Proffeciency-7
+                    </div>
+                </div>
+                <div class="verticle">
+                    <div class="vertical-text">
+                        <h3>OOPs</h3>
+                    </div>
+                    <div class="vertical-desc">
+                        <img src="images/oop.png" alt="7th skill" class="sk">
+                        <br>Proffeciency-8
+                    </div>
+                </div>
+                <div class="verticle">
+                    <div class="vertical-text">
+                        <h3>Dbms</h3>
+                    </div>
+                    <div class="vertical-desc">
+                        <img src="images/dbms.png" alt="8th skill" class="sk">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <!-- <section class="thirdSection">
+            <span class="grey">My skills</span>
+            <h1>Skills</h1>
+            <div class="skill">
+                <div class="vertical">
+                    c
+                    <a href="">photo</a>
+
+                </div>
+                <div class="vertical">
+                    c
+                    <a href="">photo</a>
+
+                </div>
+                <div class="vertical">
+                    cpp
+                    <a href="">photo</a>
+
+                </div>
+                <div class="vertical">
+                    java
+                    <a href="">photo</a>
+
+                </div>
+                <div class="vertical">
+                    html
+                    <a href="">photo</a>
+
+                </div>
+                <div class="vertical">
+                    css
+                    <a href="">photo</a>
+
+                </div>
+                <div class="vertical">
+                    Data Strucures
+                    <a href="">photo</a>
+
+                </div>
+                <div class="vertical">
+                    OOPs
+                    <a href="">photo</a>
+
+                </div>
+                <div class="vertical">
+                    DBMS
+                    <a href="">photo</a>
+
+                </div>
+            </div>
+        </section> -->
+        <section class="fourthSection" id="Certifications">
+            <h1>Certifications</h1>
+
+           <div class="imgSlider">
+                <div class="1">
+                    <li>
+                        Cpp Spoken Tutorial
+                    </li>
+                    
+                    <a href="certificates/cppspokentut.png"></a>
+        </section>
+   <footer>
+        <div class="footer" id="Contact">
+            <div class="footer-first">
+                <h3>
+                    Harry's Developer Portfolio
+                </h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>Education</li>
+                    <li>Skills</li>
+                    <li>Certifications</li>
+                    <li>Contact me</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+
+
+            </div>
+            <div class="footer-fourth">
+
+            </div>
+           
+        </div>
+        <div class="footer-rights">
+                
+           Copyrights &#169; www.Srushti's Portfolio.com|All rights reserved
+        
+    </div>
+   </footer>
+</body>
+
+</html>
